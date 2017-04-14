@@ -1,5 +1,5 @@
-hash: 2abed980e61ff7659b181849419aadcb8d9d63594a5ac3215d09df0ea12a1700
-updated: 2017-04-11T17:02:21.540487905+02:00
+hash: ba6e8de5c9cb41a5477d2f80bbc564511500c7cf3a0bde75b3828b8b2dd7042c
+updated: 2017-04-14T10:42:23.372907156-07:00
 imports:
 - name: cloud.google.com/go
   version: 2e6a95edb1071d750f6d7db777bf66cd2997af6c
@@ -93,13 +93,11 @@ imports:
 - name: github.com/coreos/etcd
   version: c400d05d0aa73e21e431c16145e558d624098018
   subpackages:
-  - Godeps/_workspace/src/github.com/coreos/go-systemd/journal
-  - Godeps/_workspace/src/github.com/coreos/pkg/capnslog
+  - Godeps/_workspace/src/github.com/ugorji/go/codec
+  - Godeps/_workspace/src/golang.org/x/net/context
   - client
-  - pkg/fileutil
   - pkg/pathutil
   - pkg/types
-  - version
 - name: github.com/coreos/go-oidc
   version: 5644a2f50e2d2d5ba0b474bc5bc55fea1925936d
   subpackages:
@@ -284,7 +282,7 @@ imports:
 - name: github.com/mattn/go-shellwords
   version: 02e3cf038dcea8290e44424da473dd12be796a8a
 - name: github.com/matttproud/golang_protobuf_extensions
-  version: c12348ce28de40eed0136aa2b644d0ee0650e56c
+  version: fc2b8d3a73c4867e51861bbdd5ae3c1f0869dd6a
   subpackages:
   - pbutil
 - name: github.com/mesos/mesos-go
@@ -347,7 +345,7 @@ imports:
   subpackages:
   - go
 - name: github.com/prometheus/common
-  version: 49fee292b27bfff7f354ee0f64e1bc4850462edf
+  version: cebb4b658c29b5df2fe80421eb743b29e0149044
   subpackages:
   - expfmt
   - internal/bitbucket.org/ww/goautoneg
@@ -453,6 +451,8 @@ imports:
   - providers/dns/rfc2136
   - providers/dns/route53
   - providers/dns/vultr
+- name: github.com/yadvendar/negroni-newrelic-go-agent
+  version: 3dc58758cb67abc45ae91e8e7bb3d90bdc254dfb
 - name: golang.org/x/crypto
   version: 4ed45ec682102c643324fae5dff8dab085b6c300
   subpackages:

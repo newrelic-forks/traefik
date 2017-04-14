@@ -27,6 +27,7 @@ import (
 	"github.com/containous/traefik/healthcheck"
 	"github.com/containous/traefik/log"
 	"github.com/containous/traefik/middlewares"
+	"github.com/containous/traefik/newrelic"
 	"github.com/containous/traefik/provider"
 	"github.com/containous/traefik/safe"
 	"github.com/containous/traefik/types"
@@ -520,6 +521,13 @@ func (server *Server) prepareServer(entryPointName string, router *middlewares.H
 	log.Infof("Preparing server %s %+v", entryPointName, entryPoint)
 	// middlewares
 	var negroni = negroni.New()
+	log.Infof("Initializing New Relic agent...")
+	config := nrgoagent.NewConfig("traefik", os.Getenv("NEWRELIC_LICENSE_KEY"))
+	newRelicMiddleware, err := nrgoagent.New(config)
+	if err != nil {
+		log.Fatalf("Error initializing New Relic agent: %s", err.Error())
+	}
+	negroni.Use(newRelicMiddleware)
 	for _, middleware := range middlewares {
 		negroni.Use(middleware)
 	}

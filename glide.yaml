@@ -1,5 +1,20 @@
 package: github.com/containous/traefik
 import:
+- package: github.com/prometheus/client_model
+  version: 6f3806018612930941127f2a7c6c453ba2c527d2
+- package: github.com/prometheus/procfs
+  version: a1dba9ce8baed984a2495b658c82687f8157b98f
+- package: github.com/prometheus/common
+  version: cebb4b658c29b5df2fe80421eb743b29e0149044
+  subpackages:
+  - expfmt
+  - internal/bitbucket.org/ww/goautoneg
+  - model
+- package: github.com/prometheus/client_golang
+  version: 08fd2e12372a66e68e30523c7642e0cbc3e4fbde
+  subpackages:
+  - prometheus
+  - prometheus/promhttp
 - package: github.com/BurntSushi/toml
 - package: github.com/BurntSushi/ty
   subpackages:
@@ -103,9 +118,11 @@ import:
 - package: github.com/hashicorp/go-version
 - package: github.com/mvdan/xurls
 - package: github.com/go-kit/kit
-  version: v0.3.0
+  version: f66b0e13579bfc5a48b9e2a94b1209c107ea1f41
   subpackages:
   - metrics
+  - metrics/internal/lv
+  - metrics/prometheus
 - package: github.com/eapache/channels
   version: v1.1.0
 - package: golang.org/x/net
@@ -140,9 +157,12 @@ import:
   - proto
 - package: github.com/rancher/go-rancher
   version: 5b8f6cc26b355ba03d7611fce3844155b7baf05b
-- package: golang.org/x/oauth2/google
+- package: golang.org/x/oauth2
   version: 7fdf09982454086d5570c7db3e11f360194830ca
+  subpackages:
+  - google
 - package: github.com/googleapis/gax-go
   version: 9af46dd5a1713e8b5cd71106287eba3cefdde50b
 - package: google.golang.org/grpc
   version: v1.2.0
+- package: github.com/yadvendar/negroni-newrelic-go-agent
