@@ -1,4 +1,4 @@
-FROM golang:1.8
+FROM golang:1.21.1
 
 # Install a more recent version of mercurial to avoid mismatching results
 # between glide run on a decently updated host system and the build container.
