@@ -19,7 +19,7 @@
     "angular-resource": "^1.5.8",
     "angular-sanitize": "^1.5.8",
     "angular-ui-bootstrap": "^2.0.0",
-    "angular-ui-router": "^0.3.1",
+    "angular-ui-router": "^1.0.4",
     "bootstrap": "^3.3.6",
     "moment": "^2.14.1",
     "nvd3": "^1.8.4"
